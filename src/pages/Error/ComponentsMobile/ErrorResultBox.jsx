@@ -27,17 +27,14 @@ Styled.Container = styled.div`
 
   text-align: center;
 
-  font-family: 'S-CoreDream-Bold';
-
   .error-text {
-    font-family: 'S-CoreDream-Bold';
+    font-family: 'CookieRunOTF-Bold';
     color: #1c1c1c;
-    line-height: 1.3;
-    font-size: 10vw;
+    font-size: 7vw;
   }
 
   .error-code {
-    font-family: 'S-CoreDream-Bold';
+    font-family: 'CookieRunOTF-Bold';
     color: #1c1c1c;
     font-size: 3vw;
   }

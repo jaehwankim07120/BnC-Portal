@@ -1,9 +1,4 @@
 /* eslint-disable no-param-reassign */
-/**
- * useScroll React custom hook
- * Usage:
- *    const { scrollX, scrollY, scrollDirection } = useScroll();
- */
 
 import React from 'react';
 import PropTypes from 'prop-types';

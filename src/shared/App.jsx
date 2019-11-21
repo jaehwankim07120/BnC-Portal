@@ -3,9 +3,9 @@ import React from 'react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
 
-import './App.scss';
+import PageError from 'pages/Error';
 
-import logo from 'resource/Image/layouts/logo.svg';
+import './App.scss';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <GlobalStyle />
       <Switch>
         <Route exact path="robots.txt" />
-        <Route component={Error} />
+        <Route component={PageError} />
       </Switch>
     </Router>
   );
