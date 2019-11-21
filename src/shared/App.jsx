@@ -1,31 +1,77 @@
 import React from 'react';
 
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import styled, { createGlobalStyle } from 'styled-components';
+
 import './App.scss';
 
 import logo from 'resource/Image/layouts/logo.svg';
 
-// import mediaConf from "configure/mediaConfig";
-// import urlConf from "configure/urlConfig";
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <GlobalStyle />
+      <Switch>
+        <Route exact path="robots.txt" />
+        <Route component={Error} />
+      </Switch>
+    </Router>
   );
 }
 
 export default App;
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0 auto;
+
+    background-color: #ffffff;
+    color: #222222;
+
+    transition: all ease 1s 0s;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  }
+
+  input {
+    border: none;
+    outline: none;
+  }
+
+  a {
+    color: #222222;
+    outline: none;
+  }
+
+  a:hover {
+    color: inherit;
+  }
+
+  a:active {
+    color: inherit;
+  }
+
+  button {
+    outline: none;
+    border: none;
+
+    background: none;
+    padding: 0;
+
+    cursor: pointer;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+`;
