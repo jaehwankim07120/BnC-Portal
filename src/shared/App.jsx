@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.scss';
 
-import logo from 'resource/logo.svg';
+import logo from 'resource/Image/layouts/logo.svg';
 
 // import mediaConf from "configure/mediaConfig";
 // import urlConf from "configure/urlConfig";

@@ -1,12 +1,10 @@
-$fontPath: 'resource/Fonts';
-
 $fontAll: 'S-CoreDream-Ltd', 'S-CoreDream', 'S-CoreDream-Bold';
 
 /* S Core Dream Fonts */
 @font-face {
   font-family: 'S-CoreDream-Ltd';
   font-display: fallback;
-  src: url('#{$fontPath}/SCoreDream/SCDream1.woff') format('woff');
+  src: url('/SCoreDream/SCDream1.woff') format('woff');
 
   font-weight: normal;
   font-style: normal;
@@ -15,7 +13,7 @@ $fontAll: 'S-CoreDream-Ltd', 'S-CoreDream', 'S-CoreDream-Bold';
 @font-face {
   font-family: 'S-CoreDream';
   font-display: fallback;
-  src: url('#{$fontPath}/SCoreDream/SCDream3.woff') format('woff');
+  src: url('/SCoreDream/SCDream3.woff') format('woff');
 
   font-weight: normal;
   font-style: normal;
@@ -24,7 +22,7 @@ $fontAll: 'S-CoreDream-Ltd', 'S-CoreDream', 'S-CoreDream-Bold';
 @font-face {
   font-family: 'S-CoreDream-Bold';
   font-display: fallback;
-  src: url('#{$fontPath}/SCoreDream/SCDream5.woff') format('woff');
+  src: url('/SCoreDream/SCDream5.woff') format('woff');
 
   font-weight: bold;
   font-style: normal;
