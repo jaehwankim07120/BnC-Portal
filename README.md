@@ -1,6 +1,6 @@
 
 
-# **Eatple Website**
+# **Portal Website**
 
 [![build](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://bitbucket.org/xengiennering/sn3d-project) [![platform](https://img.shields.io/badge/platform-mac-lightgrey.svg)]()
 
@@ -21,7 +21,7 @@
 #### **_Step 1._** Clone git repository.
 
 ```
-$ git clone https://${UserName}@bitbucket.org/eatplus/eat-website.git
+$ git clone https://BenKim0712@bitbucket.org/BenAndCara/portal-web-app.git
 ```
 
 #### **_Step 2._** NPM Install.
@@ -87,11 +87,11 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 # **Docker Scripts**
 
-### `$ docker build -t benkim07120/eatplus .`
+### `$ docker build -t bnc0401/portal .`
 
 build docker images
 
-### `$ docker push benkim07120/eatplus`
+### `$ docker push bnc0401/portal`
 
 push docker image to on cloud server
 

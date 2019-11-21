@@ -1,6 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import './App.scss';
+
+import logo from 'resource/logo.svg';
+
+// import mediaConf from "configure/mediaConfig";
+// import urlConf from "configure/urlConfig";
 
 function App() {
   return (
