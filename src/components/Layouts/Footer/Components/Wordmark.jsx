@@ -23,7 +23,7 @@ Styled.Wrap = styled.div`
 `;
 
 Styled.Container = styled.div`
-  width: 6vw;
+  width: 3vw;
   max-width: 86px;
 
   img {

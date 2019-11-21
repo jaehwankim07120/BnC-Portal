@@ -3,7 +3,10 @@ import React from 'react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
 
+import urlConf from 'configure/urlConfig';
+
 import PageError from 'pages/Error';
+import PageMain from 'pages/Main';
 
 import './App.scss';
 
@@ -12,6 +15,8 @@ function App() {
     <Router>
       <GlobalStyle />
       <Switch>
+        <Route exact path={urlConf.Main} component={PageMain} />
+
         <Route exact path="robots.txt" />
         <Route component={PageError} />
       </Switch>
@@ -28,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
 
     margin: 0 auto;
 
-    background-color: #ffffff;
+    background-color: #1c1c1c;
     color: #222222;
 
     transition: all ease 1s 0s;

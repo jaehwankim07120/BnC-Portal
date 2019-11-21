@@ -9,7 +9,7 @@ export default function SocialMap({ mapArray }) {
         {mapArray.map(entryIcon => {
           return (
             <li key={entryIcon.label}>
-              <a href={entryIcon.link} target="_blank" rel="noopener">
+              <a href={entryIcon.link} target="_blank" rel="noopener noreferrer">
                 <Styled.ImageBox src={entryIcon.icon} />
               </a>
             </li>

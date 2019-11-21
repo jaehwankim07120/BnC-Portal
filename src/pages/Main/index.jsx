@@ -6,23 +6,19 @@ import { Image } from 'utils/StyledComponents';
 
 import mediaConf from 'configure/mediaConfig';
 
+import ImgHero from 'images/Pages/Main/ImgHero.jpeg';
+
 import Menu from 'components/Layouts/Menu';
 import Footer from 'components/Layouts/Footer';
-
-import ImgBackground from 'images/Pages/Error/ImgBackground.jpeg';
-
-import ErrorResultBox from './Components/ErrorResultBox';
 
 function ContentBrowser() {
   return (
     <Styled.Section>
       <Menu />
       <Styled.BackgroundImage>
-        <Image src={ImgBackground} />
+        <Image src={ImgHero} />
       </Styled.BackgroundImage>
-      <Styled.Container>
-        <ErrorResultBox />
-      </Styled.Container>
+      <Styled.Container></Styled.Container>
       <Footer />
     </Styled.Section>
   );
@@ -39,8 +35,6 @@ Styled.Section = styled.section`
 
   width: 100vw;
   height: 100vh;
-
-  background-color: #f8f8fa;
 
   @media all and (max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT}) {
     padding: 0vh ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};

@@ -15,11 +15,6 @@ import InfoBox from './Components/InfoBox';
 import SocialMap from './Components/SocialMap';
 import Wordmark from './Components/Wordmark';
 
-import MobileCopyrightBox from './ComponentsMobile/CopyrightBox';
-import MobileInfoBox from './ComponentsMobile/InfoBox';
-import MobileSocialMap from './ComponentsMobile/SocialMap';
-import MobileWordmark from './ComponentsMobile/Wordmark';
-
 const socialMap = [
   {
     label: 'Facebook',
@@ -41,33 +36,21 @@ const socialMap = [
 function ContentBrowser() {
   return (
     <Styled.Section>
-      <Styled.Container>
-        <Wordmark />
-        <CopyrightBox />
-        <InfoBox />
+      <Styled.Wrap>
+        <Styled.Container>
+          <Wordmark />
+          <CopyrightBox />
+          <InfoBox />
 
-        <SocialMap mapArray={socialMap} />
-      </Styled.Container>
+          <SocialMap mapArray={socialMap} />
+        </Styled.Container>
+      </Styled.Wrap>
     </Styled.Section>
   );
 }
 
-function ContentMobile() {
-  return (
-    <MobileStyled.Section>
-      <MobileStyled.Container>
-        <MobileWordmark />
-        <MobileCopyrightBox />
-        <MobileInfoBox />
-
-        <MobileSocialMap mapArray={socialMap} />
-      </MobileStyled.Container>
-    </MobileStyled.Section>
-  );
-}
-
 export default function Footer() {
-  return <ReponsiveView ContentBrowser={ContentBrowser} ContentMobile={ContentMobile} />;
+  return <ReponsiveView ContentBrowser={ContentBrowser} />;
 }
 
 const Styled = {};
@@ -83,43 +66,22 @@ Styled.Section = styled.section`
 
   z-index: ${mediaConf.LAYOUT_DEFAULT_Z_INDEX};
 
-  padding: 5% ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING} 3%
-    ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};
-
   @media (max-aspect-ratio: 1/1) {
     height: calc(100vw * 0.3);
     max-height: ${mediaConf.MEDIA_WIDTH_16_9_ASPECT};
   }
 `;
 
-Styled.Container = styled.div`
+Styled.Wrap = styled.div`
   position: relative;
 
   width: 100%;
   height: 100%;
 
-  margin: 0 auto;
-
-  max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT};
+  padding: 5% ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};
 `;
 
-const MobileStyled = {};
-
-MobileStyled.Section = styled.section`
-  position: relative;
-
-  width: 100vw;
-  height: 35vh;
-
-  background-color: #1c1c1c;
-
-  z-index: ${mediaConf.LAYOUT_DEFAULT_Z_INDEX};
-
-  padding: 5% ${mediaConf.MEDIA_WIDTH_MOBILE_CONTENT_PADDING} 3%
-    ${mediaConf.MEDIA_WIDTH_MOBILE_CONTENT_PADDING};
-`;
-
-MobileStyled.Container = styled.div`
+Styled.Container = styled.div`
   position: relative;
 
   width: 100%;
