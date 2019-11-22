@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import ReponsiveView from 'utils/ResponsiveView';
-import { Image } from 'utils/StyledComponents';
+import { Image, Page } from 'utils/StyledComponents';
 
 import mediaConf from 'configure/mediaConfig';
 
@@ -15,16 +15,18 @@ import ErrorResultBox from './Components/ErrorResultBox';
 
 function ContentBrowser() {
   return (
-    <Styled.Section>
+    <Page id="error-page">
       <Menu />
-      <Styled.BackgroundImage>
-        <Image src={ImgBackground} />
-      </Styled.BackgroundImage>
-      <Styled.Container>
-        <ErrorResultBox />
-      </Styled.Container>
+      <Styled.Section>
+        <Styled.BackgroundImage>
+          <Image src={ImgBackground} />
+        </Styled.BackgroundImage>
+        <Styled.Container>
+          <ErrorResultBox />
+        </Styled.Container>
+      </Styled.Section>
       <Footer />
-    </Styled.Section>
+    </Page>
   );
 }
 
@@ -40,8 +42,6 @@ Styled.Section = styled.section`
   width: 100vw;
   height: 100vh;
 
-  background-color: #f8f8fa;
-
   @media all and (max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT}) {
     padding: 0vh ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};
   }
@@ -49,7 +49,7 @@ Styled.Section = styled.section`
 
 Styled.Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
   max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT};
   margin: 0 auto;

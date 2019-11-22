@@ -10,6 +10,8 @@ export default function CopyrightBox() {
         jaehwankim07120@gmail.com
         <br />
         ©2020 BnC Inc. All rights reserved.
+        <br />
+        010-5780-9397
       </Styled.Container>
     </Styled.Wrap>
   );
@@ -18,9 +20,7 @@ export default function CopyrightBox() {
 const Styled = {};
 
 Styled.Wrap = styled.div`
-  position: absolute;
-  right: 0px;
-  bottom: 0;
+  flex: 0 0 auto;
 `;
 
 Styled.Container = styled.div`
@@ -28,7 +28,7 @@ Styled.Container = styled.div`
 
   color: #f8f8fa;
 
-  text-align: right;
+  text-align: left;
   font-size: 0.8vw;
   line-height: 1.54;
 

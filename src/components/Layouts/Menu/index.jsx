@@ -9,11 +9,11 @@ import MenuBar from './Components/MenuBar';
 
 function ContentBrowser() {
   return (
-    <Styled.Section>
+    <Styled.Menu id="nav">
       <Styled.Container>
         <MenuBar />
       </Styled.Container>
-    </Styled.Section>
+    </Styled.Menu>
   );
 }
 
@@ -23,9 +23,9 @@ export default function Menu() {
 
 const Styled = {};
 
-Styled.Section = styled.section`
+Styled.Menu = styled.section`
   position: absolute;
-  top: 2%;
+  top: 0;
   left: 0;
 
   width: 100vw;
@@ -39,8 +39,8 @@ Styled.Section = styled.section`
 `;
 
 Styled.Container = styled.div`
-  position: relative;
-  top: 0%;
+  display: flex;
+  flex-direction: column;
 
   max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT};
   height: 100%;

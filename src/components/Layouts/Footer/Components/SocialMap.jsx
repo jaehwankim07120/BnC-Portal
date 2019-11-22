@@ -26,10 +26,9 @@ SocialMap.propTypes = {
 const Styled = {};
 
 Styled.Wrap = styled.div`
-  position: absolute;
+  flex: 0 0 auto;
 
-  top: 0;
-  right: 0;
+  margin-left: auto;
 `;
 
 Styled.Container = styled.ul`

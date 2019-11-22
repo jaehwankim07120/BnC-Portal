@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import ReponsiveView from 'utils/ResponsiveView';
-import { Image } from 'utils/StyledComponents';
+import { Image, Page } from 'utils/StyledComponents';
 
 import mediaConf from 'configure/mediaConfig';
 
@@ -13,18 +13,20 @@ import Footer from 'components/Layouts/Footer';
 
 function ContentBrowser() {
   return (
-    <Styled.Section>
+    <Page id="main-page">
       <Menu />
-      <Styled.BackgroundImage>
-        <Image src={ImgHero} />
-      </Styled.BackgroundImage>
-      <Styled.Container></Styled.Container>
+      <Styled.Section>
+        <Styled.BackgroundImage>
+          <Image src={ImgHero} />
+        </Styled.BackgroundImage>
+        <Styled.Container></Styled.Container>
+      </Styled.Section>
       <Footer />
-    </Styled.Section>
+    </Page>
   );
 }
 
-export default function Error() {
+export default function Main() {
   return <ReponsiveView ContentBrowser={ContentBrowser} />;
 }
 
@@ -33,8 +35,7 @@ const Styled = {};
 Styled.Section = styled.section`
   position: relative;
 
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
 
   @media all and (max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT}) {
     padding: 0vh ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};
@@ -43,7 +44,7 @@ Styled.Section = styled.section`
 
 Styled.Container = styled.div`
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
 
   max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT};
   margin: 0 auto;

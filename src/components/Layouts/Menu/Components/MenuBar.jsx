@@ -45,10 +45,7 @@ Styled.MenuBar = styled(animated.div)`
 `;
 
 Styled.Logo = styled.div`
-  position: relative;
-  bottom: 0;
-
-  display: inline-block;
+  margin: auto 0;
 
   width: 60px;
   height: 60px;

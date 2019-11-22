@@ -16,10 +16,7 @@ export default function Wordmark() {
 const Styled = {};
 
 Styled.Wrap = styled.div`
-  position: absolute;
-
-  top: 0;
-  left: 0;
+  flex: 0 0 auto;
 `;
 
 Styled.Container = styled.div`

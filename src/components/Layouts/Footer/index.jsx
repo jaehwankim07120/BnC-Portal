@@ -4,48 +4,28 @@ import styled from 'styled-components';
 import ReponsiveView from 'utils/ResponsiveView';
 
 import mediaConf from 'configure/mediaConfig';
-import urlConf from 'configure/urlConfig';
-
-import IconInstagram from 'images/Layouts/IcInstagram.svg';
-import IconFacebook from 'images/Layouts/IcFacebook.svg';
-import IconYoutube from 'images/Layouts/IcYoutube.svg';
 
 import CopyrightBox from './Components/CopyrightBox';
-import InfoBox from './Components/InfoBox';
 import SocialMap from './Components/SocialMap';
 import Wordmark from './Components/Wordmark';
 
-const socialMap = [
-  {
-    label: 'Facebook',
-    icon: IconFacebook,
-    link: urlConf.facebook,
-  },
-  {
-    label: 'Youtube',
-    icon: IconYoutube,
-    link: urlConf.youtube,
-  },
-  {
-    label: 'Instagram',
-    icon: IconInstagram,
-    link: urlConf.instagram,
-  },
-];
+import { socialMap } from './Constants';
 
 function ContentBrowser() {
   return (
-    <Styled.Section>
+    <Styled.Footer id="footer">
       <Styled.Wrap>
         <Styled.Container>
-          <Wordmark />
-          <CopyrightBox />
-          <InfoBox />
-
-          <SocialMap mapArray={socialMap} />
+          <Styled.ContentsTop>
+            <Wordmark />
+            <SocialMap mapArray={socialMap} />
+          </Styled.ContentsTop>
+          <Styled.ContentsBottom>
+            <CopyrightBox />
+          </Styled.ContentsBottom>
         </Styled.Container>
       </Styled.Wrap>
-    </Styled.Section>
+    </Styled.Footer>
   );
 }
 
@@ -55,12 +35,11 @@ export default function Footer() {
 
 const Styled = {};
 
-Styled.Section = styled.section`
+Styled.Footer = styled.section`
   position: relative;
 
   width: 100vw;
   height: calc(100vw * 0.2);
-  max-height: 220px;
 
   background-color: #1c1c1c;
 
@@ -75,19 +54,32 @@ Styled.Section = styled.section`
 Styled.Wrap = styled.div`
   position: relative;
 
-  width: 100%;
+  margin: auto;
+
   height: 100%;
 
-  padding: 5% ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};
+  max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT};
 `;
 
 Styled.Container = styled.div`
-  position: relative;
+  display: flex;
+  flex-direction: column;
 
-  width: 100%;
   height: 100%;
+`;
 
-  margin: 0 auto;
+Styled.ContentsTop = styled.div`
+  display: flex;
+  flex-direction: row;
 
-  max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT};
+  padding: 2% ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};
+`;
+
+Styled.ContentsBottom = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  margin-top: auto;
+
+  padding: 2% ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};
 `;
