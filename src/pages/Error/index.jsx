@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import ReponsiveView from 'utils/ResponsiveView';
-import { Image, Page } from 'utils/StyledComponents';
+import { Img, Page } from 'utils/StyledComponents';
 
 import mediaConf from 'configure/mediaConfig';
 
@@ -19,7 +19,7 @@ function ContentBrowser() {
       <Menu />
       <Styled.Section>
         <Styled.BackgroundImage>
-          <Image src={ImgBackground} />
+          <Img src={ImgBackground} />
         </Styled.BackgroundImage>
         <Styled.Container>
           <ErrorResultBox />

@@ -4,22 +4,22 @@ import IconInstagram from 'images/Layouts/IcInstagram.svg';
 import IconFacebook from 'images/Layouts/IcFacebook.svg';
 import IconYoutube from 'images/Layouts/IcYoutube.svg';
 
-export const socialMap = [
+export const socialMapArray = [
   {
     label: 'Facebook',
     icon: IconFacebook,
-    link: urlConf.facebook,
+    link: urlConf.Facebook,
   },
   {
     label: 'Youtube',
     icon: IconYoutube,
-    link: urlConf.youtube,
+    link: urlConf.Youtube,
   },
   {
     label: 'Instagram',
     icon: IconInstagram,
-    link: urlConf.instagram,
+    link: urlConf.Instagram,
   },
 ];
 
-export default { socialMap };
+export default { socialMapArray };

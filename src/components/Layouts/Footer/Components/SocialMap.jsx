@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-export default function SocialMap({ mapArray }) {
+export default function SocialMap({ socialMapArray }) {
   return (
     <Styled.Wrap>
       <Styled.Container>
-        {mapArray.map(entryIcon => {
+        {socialMapArray.map(entryIcon => {
           return (
             <li key={entryIcon.label}>
               <a href={entryIcon.link} target="_blank" rel="noopener noreferrer">
@@ -20,7 +20,7 @@ export default function SocialMap({ mapArray }) {
   );
 }
 SocialMap.propTypes = {
-  mapArray: PropTypes.array.isRequired,
+  socialMapArray: PropTypes.array.isRequired,
 };
 
 const Styled = {};

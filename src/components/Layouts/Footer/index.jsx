@@ -9,22 +9,20 @@ import CopyrightBox from './Components/CopyrightBox';
 import SocialMap from './Components/SocialMap';
 import Wordmark from './Components/Wordmark';
 
-import { socialMap } from './Constants';
+import { socialMapArray } from './Constants';
 
 function ContentBrowser() {
   return (
     <Styled.Footer id="footer">
-      <Styled.Wrap>
-        <Styled.Container>
-          <Styled.ContentsTop>
-            <Wordmark />
-            <SocialMap mapArray={socialMap} />
-          </Styled.ContentsTop>
-          <Styled.ContentsBottom>
-            <CopyrightBox />
-          </Styled.ContentsBottom>
-        </Styled.Container>
-      </Styled.Wrap>
+      <Styled.Container>
+        <Styled.ContentsTop>
+          <Wordmark />
+          <SocialMap socialMapArray={socialMapArray} />
+        </Styled.ContentsTop>
+        <Styled.ContentsBottom>
+          <CopyrightBox />
+        </Styled.ContentsBottom>
+      </Styled.Container>
     </Styled.Footer>
   );
 }
@@ -39,40 +37,33 @@ Styled.Footer = styled.section`
   position: relative;
 
   width: 100vw;
-  height: calc(100vw * 0.2);
+  height: 320px;
+  max-height: 320px;
 
   background-color: #1c1c1c;
 
   z-index: ${mediaConf.LAYOUT_DEFAULT_Z_INDEX};
-
-  @media (max-aspect-ratio: 1/1) {
-    height: calc(100vw * 0.3);
-    max-height: ${mediaConf.MEDIA_WIDTH_16_9_ASPECT};
-  }
-`;
-
-Styled.Wrap = styled.div`
-  position: relative;
-
-  margin: auto;
-
-  height: 100%;
-
-  max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT};
 `;
 
 Styled.Container = styled.div`
   display: flex;
   flex-direction: column;
 
+  max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT};
   height: 100%;
+
+  margin: auto;
+
+  padding: 50px 0;
+
+  @media all and (max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT}) {
+    padding: 50px ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};
+  }
 `;
 
 Styled.ContentsTop = styled.div`
   display: flex;
   flex-direction: row;
-
-  padding: 2% ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};
 `;
 
 Styled.ContentsBottom = styled.div`
@@ -80,6 +71,4 @@ Styled.ContentsBottom = styled.div`
   flex-direction: row;
 
   margin-top: auto;
-
-  padding: 2% ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};
 `;

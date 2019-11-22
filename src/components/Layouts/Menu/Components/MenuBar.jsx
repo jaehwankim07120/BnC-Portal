@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import { Image } from 'utils/StyledComponents';
+import { Img } from 'utils/StyledComponents';
 
 import { useSpring, animated } from 'react-spring';
 
@@ -25,7 +25,7 @@ export default function MenuBar() {
     <Styled.MenuBar style={styleMenu}>
       <Link to={urlConf.Main}>
         <Styled.Logo>
-          <Image src={ImgLogo} className="d-inline-block align-top menu-bar-logo" />
+          <Img src={ImgLogo} className="d-inline-block align-top menu-bar-logo" />
         </Styled.Logo>
       </Link>
     </Styled.MenuBar>

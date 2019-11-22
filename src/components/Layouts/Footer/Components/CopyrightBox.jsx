@@ -7,11 +7,11 @@ export default function CopyrightBox() {
   return (
     <Styled.Wrap>
       <Styled.Container>
-        jaehwankim07120@gmail.com
+        Phone : +82) 010-5780-9397
+        <br />
+        E-Mail : jaehwankim07120@gmail.com
         <br />
         ©2020 BnC Inc. All rights reserved.
-        <br />
-        010-5780-9397
       </Styled.Container>
     </Styled.Wrap>
   );
