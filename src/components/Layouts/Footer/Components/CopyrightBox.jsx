@@ -24,16 +24,16 @@ Styled.Wrap = styled.div`
 `;
 
 Styled.Container = styled.div`
-  font-family: 'S-CoreDream';
-
   color: #f8f8fa;
 
   text-align: left;
-  font-size: 0.8vw;
+  font-size: 2vw;
   line-height: 1.54;
 
+  font-family: 'S-CoreDream-Ltd';
+
   @media all and (min-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT}) {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   @media (max-aspect-ratio: 1/1) {

@@ -36,10 +36,6 @@ Styled.Section = styled.section`
   position: relative;
 
   width: 100%;
-
-  @media all and (max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT}) {
-    padding: 0vh ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};
-  }
 `;
 
 Styled.Container = styled.div`

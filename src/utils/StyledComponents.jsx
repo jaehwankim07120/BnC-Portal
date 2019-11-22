@@ -32,6 +32,20 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
+  a {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: inherit;
+  }
+
+  a:active {
+    color: inherit;
+  }
+
   ul {
     padding: 0;
     margin: 0;
@@ -54,11 +68,21 @@ export const Img = styled.div`
   background-size: cover;
 `;
 
-export const H1 = styled.h1``;
-export const H2 = styled.h2``;
-export const H3 = styled.h3``;
-export const H4 = styled.h4``;
-export const H5 = styled.h5``;
+export const H1 = styled.h1`
+  font-family: 'S-CoreDream-Bold';
+`;
+export const H2 = styled.h2`
+  font-family: 'S-CoreDream-Bold';
+`;
+export const H3 = styled.h3`
+  font-family: 'S-CoreDream-Bold';
+`;
+export const H4 = styled.h4`
+  font-family: 'S-CoreDream-Bold';
+`;
+export const H5 = styled.h5`
+  font-family: 'S-CoreDream-Bold';
+`;
 
 export const P = styled.p``;
 

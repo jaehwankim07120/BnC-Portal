@@ -28,13 +28,11 @@ Styled.Container = styled.div`
   text-align: center;
 
   .error-text {
-    font-family: 'CookieRunOTF-Bold';
     color: #1c1c1c;
     font-size: 7vw;
   }
 
   .error-code {
-    font-family: 'CookieRunOTF-Bold';
     color: #1c1c1c;
     font-size: 2vw;
   }

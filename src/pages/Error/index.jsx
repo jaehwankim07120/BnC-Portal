@@ -41,10 +41,6 @@ Styled.Section = styled.section`
 
   width: 100vw;
   height: 100vh;
-
-  @media all and (max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT}) {
-    padding: 0vh ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};
-  }
 `;
 
 Styled.Container = styled.div`

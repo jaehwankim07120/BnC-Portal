@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import ReponsiveView from 'utils/ResponsiveView';
+import useScroll from 'utils/useScroll';
 
 import mediaConf from 'configure/mediaConfig';
 
 import MenuBar from './Components/MenuBar';
 
 function ContentBrowser() {
+  const { scrollY } = useScroll();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    if (window.scrollY <= 30) {
+      setIsScrolled(false);
+    } else {
+      setIsScrolled(true);
+    }
+  }, [scrollY, isScrolled]);
+
   return (
-    <Styled.Menu id="nav">
-      <Styled.Container>
-        <MenuBar />
+    <Styled.Menu id="nav" isScrolled={isScrolled}>
+      <Styled.Container isScrolled={isScrolled}>
+        <MenuBar isScrolled={isScrolled} />
       </Styled.Container>
     </Styled.Menu>
   );
@@ -24,16 +36,30 @@ export default function Menu() {
 const Styled = {};
 
 Styled.Menu = styled.section`
-  position: absolute;
-  top: 0;
-  left: 0;
+  transition: all 1s;
+
+  ${props => {
+    if (props.isScrolled) {
+      return `
+        position: fixed;
+        top: 0;
+        left: 50%;
+
+        transform: translate(-50%, 0);
+
+        background-color: rgba(0, 0, 0, 0.5);
+      `;
+    }
+
+    return `
+      position: absolute;
+      top: 0px;
+      left: 0;
+  `;
+  }}
 
   width: 100vw;
-  height: 80px;
-
-  @media all and (max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT}) {
-    padding: 0 ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};
-  }
+  height: 100px;
 
   z-index: ${mediaConf.LAYOUT_DEFAULT_Z_INDEX};
 `;
@@ -41,6 +67,20 @@ Styled.Menu = styled.section`
 Styled.Container = styled.div`
   display: flex;
   flex-direction: column;
+
+  transition: all 0.6s;
+
+  ${props => {
+    if (props.isScrolled) {
+      return `
+        width: 40%;
+      `;
+    }
+
+    return `
+      width: 100%;
+  `;
+  }}
 
   max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT};
   height: 100%;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ImgWordmark from 'images/Layouts/logo.svg';
+import ImgWordmark from 'images/Layouts/Logo.svg';
 
 export default function Wordmark() {
   return (

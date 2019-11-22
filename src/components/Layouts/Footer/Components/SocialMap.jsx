@@ -1,8 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-export default function SocialMap({ socialMapArray }) {
+import { Img } from 'utils/StyledComponents';
+
+import { socialMapArray } from 'configure/Constants';
+
+export default function SocialMap() {
   return (
     <Styled.Wrap>
       <Styled.Container>
@@ -10,7 +13,7 @@ export default function SocialMap({ socialMapArray }) {
           return (
             <li key={entryIcon.label}>
               <a href={entryIcon.link} target="_blank" rel="noopener noreferrer">
-                <Styled.ImageBox src={entryIcon.icon} />
+                <Img src={entryIcon.icon} />
               </a>
             </li>
           );
@@ -19,9 +22,6 @@ export default function SocialMap({ socialMapArray }) {
     </Styled.Wrap>
   );
 }
-SocialMap.propTypes = {
-  socialMapArray: PropTypes.array.isRequired,
-};
 
 const Styled = {};
 
@@ -46,16 +46,4 @@ Styled.Container = styled.ul`
   li:last-child {
     margin-right: 0;
   }
-`;
-
-Styled.ImageBox = styled.div`
-  width: 100%;
-  height: 100%;
-
-  background-image: ${props => {
-    return `url(${props.src})`;
-  }};
-
-  background-position: center center;
-  background-size: cover;
 `;

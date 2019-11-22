@@ -9,15 +9,13 @@ import CopyrightBox from './Components/CopyrightBox';
 import SocialMap from './Components/SocialMap';
 import Wordmark from './Components/Wordmark';
 
-import { socialMapArray } from './Constants';
-
 function ContentBrowser() {
   return (
     <Styled.Footer id="footer">
       <Styled.Container>
         <Styled.ContentsTop>
           <Wordmark />
-          <SocialMap socialMapArray={socialMapArray} />
+          <SocialMap />
         </Styled.ContentsTop>
         <Styled.ContentsBottom>
           <CopyrightBox />
