@@ -36,30 +36,27 @@ export default function Menu() {
 const Styled = {};
 
 Styled.Menu = styled.section`
-  transition: all 1s;
+  position: fixed;
+  top: 0;
+  left: 50%;
+
+  transition: all 0.6s;
+  transform: translate(-50%, 0);
 
   ${props => {
     if (props.isScrolled) {
       return `
-        position: fixed;
-        top: 0;
-        left: 50%;
-
-        transform: translate(-50%, 0);
-
         background-color: rgba(0, 0, 0, 0.5);
+        height: 70px;
       `;
     }
 
-    return `
-      position: absolute;
-      top: 0px;
-      left: 0;
-  `;
+    return `  
+      height: 100px;
+    `;
   }}
 
   width: 100vw;
-  height: 100px;
 
   z-index: ${mediaConf.LAYOUT_DEFAULT_Z_INDEX};
 `;
@@ -74,6 +71,10 @@ Styled.Container = styled.div`
     if (props.isScrolled) {
       return `
         width: 40%;
+
+        @media all and (max-width: calc(${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT} + 100px)) {
+          width: 70%;
+        }
       `;
     }
 

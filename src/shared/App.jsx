@@ -14,8 +14,9 @@ function App() {
       <Switch>
         <Route exact path={urlConf.Main} component={PageMain} />
 
-        <Route exact path="robots.txt" />
         <Route component={PageError} />
+
+        <Route exact path="robots.txt" />
       </Switch>
     </Router>
   );

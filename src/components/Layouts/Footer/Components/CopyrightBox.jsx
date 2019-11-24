@@ -27,13 +27,13 @@ Styled.Container = styled.div`
   color: #f8f8fa;
 
   text-align: left;
-  font-size: 2vw;
+  font-size: 1.2vw;
   line-height: 1.54;
 
   font-family: 'S-CoreDream-Ltd';
 
   @media all and (min-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT}) {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   @media (max-aspect-ratio: 1/1) {

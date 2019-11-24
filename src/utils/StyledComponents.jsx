@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
 
     margin: 0 auto;
 
-    background-color: #1c1c1c;
+    background-color: #222222;
     color: #222222;
 
     transition: all ease 1s 0s;

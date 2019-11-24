@@ -1,13 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import { H2, H5 } from 'utils/StyledComponents';
 
 export default function ErrorResultBox() {
   return (
     <Styled.Wrap>
       <Styled.Container>
-        <span className="error-text">Oops!</span>
-        <br />
-        <span className="error-code">404 - Page Not Found.</span>
+        <H2>
+          <span className="error-text">Oops!</span>
+        </H2>
+        <H5>
+          <span className="error-code">404 - Page Not Found.</span>
+        </H5>
       </Styled.Container>
     </Styled.Wrap>
   );

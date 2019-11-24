@@ -34,11 +34,16 @@ const Styled = {};
 Styled.Footer = styled.section`
   position: relative;
 
-  width: 100vw;
   height: 320px;
   max-height: 320px;
 
   background-color: #1c1c1c;
+
+  padding: 50px 0;
+
+  @media all and (max-width: calc(${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT} + 100px)) {
+    padding: 50px ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};
+  }
 
   z-index: ${mediaConf.LAYOUT_DEFAULT_Z_INDEX};
 `;
@@ -51,12 +56,6 @@ Styled.Container = styled.div`
   height: 100%;
 
   margin: auto;
-
-  padding: 50px 0;
-
-  @media all and (max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT}) {
-    padding: 50px ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};
-  }
 `;
 
 Styled.ContentsTop = styled.div`

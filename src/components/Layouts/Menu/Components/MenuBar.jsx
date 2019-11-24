@@ -51,12 +51,12 @@ export default function MenuBar({ isScrolled }) {
           </Link>
         </Styled.RightItem>
         <Styled.RightItem>
-          <Link to={urlConf.Main}>
+          <Link to={urlConf.Career}>
             <H4>CAREER</H4>
           </Link>
         </Styled.RightItem>
         <Styled.RightItem>
-          <Link to={urlConf.Main}>
+          <Link to={urlConf.Contact}>
             <H4>CONTACT</H4>
           </Link>
         </Styled.RightItem>
@@ -78,7 +78,7 @@ Styled.MenuBar = styled(animated.div)`
   display: flex;
   align-items: center;
 
-  @media all and (max-width: ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT}) {
+  @media all and (max-width: calc(${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT} + 100px)) {
     padding: 0 ${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT_PADDING};
   }
 `;
