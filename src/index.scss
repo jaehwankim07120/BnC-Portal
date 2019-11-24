@@ -1,4 +1,22 @@
 @font-face {
+  font-family: 'Borda';
+  font-display: fallback;
+  src: url('fonts/Borda/Borda-Medium.woff') format('woff');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Europe-Bold';
+  font-display: fallback;
+  src: url('fonts/Europe/Europe-Bold') format('woff');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'S-CoreDream';
   font-display: fallback;
   src: url('fonts/SCoreDream/SCDream3.woff') format('woff');
@@ -27,9 +45,9 @@
 
 body {
   margin: 0;
-  font-family: 'S-CoreDream', 'S-CoreDream-Bold', 'S-CoreDream-Ltd', -apple-system,
-    BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Europe', 'Borda', 'S-CoreDream', 'S-CoreDream-Bold', 'S-CoreDream-Ltd',
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

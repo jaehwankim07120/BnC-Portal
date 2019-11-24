@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
 
     margin: 0 auto;
 
-    background-color: #222222;
+    background-color: #1c1c1c;
     color: #222222;
 
     transition: all ease 1s 0s;
@@ -64,24 +64,24 @@ export const Img = styled.div`
     return `url(${props.src})`;
   }};
 
-  background-position: center center;
+  background-position: top center;
   background-size: cover;
 `;
 
 export const H1 = styled.h1`
-  font-family: 'S-CoreDream-Bold';
+  font-family: 'Borda';
 `;
 export const H2 = styled.h2`
-  font-family: 'S-CoreDream-Bold';
+  font-family: 'Borda';
 `;
 export const H3 = styled.h3`
-  font-family: 'S-CoreDream-Bold';
+  font-family: 'Borda';
 `;
 export const H4 = styled.h4`
-  font-family: 'S-CoreDream-Bold';
+  font-family: 'Borda';
 `;
 export const H5 = styled.h5`
-  font-family: 'S-CoreDream-Bold';
+  font-family: 'Borda';
 `;
 
 export const P = styled.p``;

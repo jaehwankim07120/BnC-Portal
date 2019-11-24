@@ -34,10 +34,10 @@ const Styled = {};
 Styled.Footer = styled.section`
   position: relative;
 
-  height: 320px;
-  max-height: 320px;
+  height: 280px;
+  max-height: 280px;
 
-  background-color: #1c1c1c;
+  background-color: #000000;
 
   padding: 50px 0;
 

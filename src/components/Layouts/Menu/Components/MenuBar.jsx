@@ -5,7 +5,7 @@ import PropType from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
 
-import { Img, H4 } from 'utils/StyledComponents';
+import { Img, H3 } from 'utils/StyledComponents';
 
 import mediaConf from 'configure/mediaConfig';
 import urlConf from 'configure/urlConfig';
@@ -46,18 +46,18 @@ export default function MenuBar({ isScrolled }) {
 
       <Styled.RightItemList>
         <Styled.RightItem>
-          <Link to={urlConf.Main}>
-            <H4>MAIN</H4>
-          </Link>
-        </Styled.RightItem>
-        <Styled.RightItem>
           <Link to={urlConf.Career}>
-            <H4>CAREER</H4>
+            <H3>Career</H3>
           </Link>
         </Styled.RightItem>
         <Styled.RightItem>
           <Link to={urlConf.Contact}>
-            <H4>CONTACT</H4>
+            <H3>Contact</H3>
+          </Link>
+        </Styled.RightItem>{' '}
+        <Styled.RightItem>
+          <Link to={urlConf.Main}>
+            <H3>More</H3>
           </Link>
         </Styled.RightItem>
       </Styled.RightItemList>

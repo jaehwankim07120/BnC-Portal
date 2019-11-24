@@ -46,7 +46,12 @@ Styled.Menu = styled.section`
   ${props => {
     if (props.isScrolled) {
       return `
-        background-color: rgba(0, 0, 0, 0.5);
+        background: linear-gradient(
+          to left,
+          rgba(13, 13, 13, 1) 0%,
+          rgba(13, 13, 13, 0) 50%,
+          rgba(13, 13, 13, 1) 100%
+        );
         height: 70px;
       `;
     }
