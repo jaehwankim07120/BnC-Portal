@@ -13,7 +13,6 @@ export default function Slide() {
         <Img src={ImgTDC} />
       </ImgWrap>
 
-      <TopGradient />
       <BottomGradient />
       <Container></Container>
     </Wrap>
@@ -50,17 +49,6 @@ const ImgWrap = styled.div`
   height: 100%;
 
   filter: contrast(115%);
-`;
-
-const TopGradient = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 1%;
-
-  background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
 `;
 
 const BottomGradient = styled.div`
