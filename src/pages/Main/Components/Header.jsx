@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Img } from 'utils/StyledComponents';
 
-import ImgTDC from 'images/Pages/Main/Header/ImgTCD3.jpg';
+import ImgTDC from 'images/Pages/Main/Header/ImgTCD2.jpg';
 
 export default function Header() {
   return (
@@ -13,6 +13,7 @@ export default function Header() {
         <Img src={ImgTDC} />
       </ImgWrap>
 
+      <BottomGradient />
       <Container></Container>
     </Wrap>
   );
@@ -22,7 +23,7 @@ const Wrap = styled.div`
   position: relative;
 
   width: 100%;
-  height: 120vh;
+  height: 100vh;
 `;
 
 const Container = styled.div`
@@ -37,14 +38,6 @@ const ImgMask = styled.div`
 
   width: 100%;
   height: 100%;
-
-  background: linear-gradient(
-    to left,
-    rgba(13, 13, 13, 1) 0%,
-    rgba(13, 13, 13, 0) 40%,
-    rgba(13, 13, 13, 0) 60%,
-    rgba(13, 13, 13, 1) 100%
-  );
 `;
 
 const ImgWrap = styled.div`
@@ -54,4 +47,17 @@ const ImgWrap = styled.div`
 
   width: 100%;
   height: 100%;
+
+  filter: contrast(115%);
+`;
+
+const BottomGradient = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 20%;
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
 `;

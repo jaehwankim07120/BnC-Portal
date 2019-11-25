@@ -8,6 +8,8 @@ import Menu from 'components/Layouts/Menu';
 import Footer from 'components/Layouts/Footer';
 
 import CompHeader from './Components/Header';
+import CompMore from './Components/More';
+import CompCareer from './Components/Career';
 import CompSlide from './Components/Slide';
 
 function ContentBrowser() {
@@ -17,6 +19,8 @@ function ContentBrowser() {
       <Styled.Section>
         <Styled.Container>
           <CompHeader />
+          <CompCareer />
+          <CompMore />
           <CompSlide />
         </Styled.Container>
       </Styled.Section>
