@@ -103,8 +103,6 @@ Styled.RightItemList = styled.div`
 
 Styled.RightItem = styled.div`
   padding-left: 25px;
-
-  color: white;
 `;
 
 Styled.LeftItemList = styled.div`
@@ -120,6 +118,4 @@ Styled.LeftItem = styled.div`
   max-width: 36px;
   height: 2.2vw;
   max-height: 36px;
-
-  color: white;
 `;

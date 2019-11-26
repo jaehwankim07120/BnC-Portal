@@ -46,7 +46,7 @@ Styled.Menu = styled.section`
   ${props => {
     if (props.isScrolled) {
       return `
-        background: rgba(13, 13, 13, 0.6);
+        background: rgba(0, 0, 0, 0.5);
         height: 70px;
       `;
     }
@@ -75,11 +75,14 @@ Styled.Container = styled.div`
         @media all and (max-width: calc(${mediaConf.MEDIA_WIDTH_DESKTOP_CONTENT} + 100px)) {
           width: 70%;
         }
+
+        color: white;
       `;
     }
 
     return `
       width: 100%;
+      color: black;
   `;
   }}
 

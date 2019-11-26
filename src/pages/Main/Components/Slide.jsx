@@ -15,7 +15,7 @@ export default function Slide() {
 
       <TopGradient />
       <BottomGradient />
-      <Container></Container>
+      <Container />
     </Wrap>
   );
 }
@@ -56,6 +56,9 @@ const ImgWrap = styled.div`
     rgba(13, 13, 13, 0) 60%,
     rgba(13, 13, 13, 1) 100%
   );
+
+  filter: contrast(85%);
+  background-attachment: fixed;
 `;
 
 const TopGradient = styled.div`
