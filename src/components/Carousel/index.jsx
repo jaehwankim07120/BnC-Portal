@@ -145,6 +145,7 @@ const CarouselBox = styled.div`
     width: ${Level_2_Width} - 20;
     line-height: ${Level_2_Height} - 30;
     margin-top: 40px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
   }
 
   .left-enter.left-enter-active {
@@ -164,6 +165,7 @@ const CarouselBox = styled.div`
     width: ${Level_2_Width};
     line-height: ${Level_2_Height};
     margin-top: 25px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
   }
 
   .left-leave.left-leave-active {
@@ -183,6 +185,7 @@ const CarouselBox = styled.div`
     width: ${Level_2_Width} - 20;
     line-height: ${Level_2_Height} - 30;
     margin-top: 40px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
   }
 
   .right-enter.right-enter-active {
@@ -202,6 +205,7 @@ const CarouselBox = styled.div`
     margin-top: 25px;
     line-height: ${Level_2_Height};
     width: ${Level_2_Width};
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
   }
 
   .right-leave.right-leave-active {
@@ -232,7 +236,7 @@ const ItemBox = styled.div`
   position: absolute;
   transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s, background-color 1s;
 
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(10deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
   border-radius: 15px;
 
   ${props => {
